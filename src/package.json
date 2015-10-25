@@ -1,6 +1,6 @@
 {
   "name": "noise-thing",
-  "productName": "Noise Thing",
+  "productName": "Noise-Thing",
   "version": "0.2.2",
   "description": "a noisy thing indeed",
   "main": "./scripts/browser/main.js",
@@ -9,7 +9,8 @@
     "mustache": "^2.1.2",
     "request": "^2.58.0",
     "semver": "^5.0.1",
-    "yargs": "^3.15.0"
+    "yargs": "^3.15.0",
+    "jquery": "2.1.4"
   },
   "scripts": {
     "postinstall": "npm dedupe"
