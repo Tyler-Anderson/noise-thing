@@ -24,7 +24,9 @@
     "gulp-mustache": "^1.1.0",
     "gulp-plumber": "^1.0.1",
     "gulp-zip": "^3.0.2",
+    "gulp-sass":"^2.0.4",
     "rcedit": "^0.3.0",
+    "menubar": "^2.3.0",
     "require-dir": "^0.3.0"
   },
   "devDependencies": {

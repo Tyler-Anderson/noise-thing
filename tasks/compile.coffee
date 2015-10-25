@@ -7,7 +7,7 @@ mustache = require 'gulp-mustache'
 cson = require 'gulp-cson'
 less = require 'gulp-less'
 babel = require 'gulp-babel'
-
+sass = require 'gulp-sass'
 embedlr = require 'gulp-embedlr'
 livereload = require 'gulp-livereload'
 
@@ -36,6 +36,14 @@ manifest = require '../src/package.json'
       .pipe less()
       .pipe gulp.dest dir + '/styles'
       .pipe livereload()
+
+  gulp.task 'compile:' + dist + ':styles', ['clean:build:' + dist], ->
+    gulp.src './src/styles/**/*.scss'
+      .pipe plumber -> beeper()
+      .pipe sass()
+      .pipe gulp.dest dir + '/styles'
+      .pipe livereload()
+
 
   # Compile scripts
   gulp.task 'compile:' + dist + ':scripts', ['clean:build:' + dist], ->

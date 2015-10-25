@@ -17,7 +17,8 @@ class AppWindow extends EventEmitter {
       width: 640,
       height: 960,
       resizable: false,
-      frame: false,
+      show: true,
+      //   frame: false,
       'web-preferences': {
         'webaudio': true,
         'web-security': false,

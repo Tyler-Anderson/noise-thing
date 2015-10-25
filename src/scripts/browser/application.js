@@ -9,6 +9,8 @@ import AppMenu from './app-menu';
 import AppWindow from './app-window';
 import Updater from './updater';
 
+
+
 class Application extends EventEmitter {
 
   /**
