@@ -10,31 +10,17 @@ $lightpeach: #e7b390;
 $yellow: #eccd75;
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+ // font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   padding: 30px;
   background-color: $pale-yellow;
 }
 
-h1 {
 
-@font-face {
-    font-family: 'rissatypefaceregular';
-    src: url('../fonts/rissatypeface-webfont.eot');
-    src: url('../fonts/rissatypeface-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/rissatypeface-webfont.woff2') format('woff2'),
-         url('../fonts/rissatypeface-webfont.woff') format('woff'),
-         url('../fonts/rissatypeface-webfont.ttf') format('truetype'),
-         url('../fonts/rissatypeface-webfont.svg#rissatypefaceregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-    @font-face {
-        font-family: RissaTypeface;
-        src: url("./RissaTypeface.otf" format("opentype"));
-    }
+h1{
+    font-size: 70px;
+    text-align: center;
+    color: $darkpurple;
 }
 
 h2 {
