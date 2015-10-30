@@ -45,9 +45,9 @@
     }
   },
   "darwin": {
-    "bundleId": "com.aluxian.starterkit",
+    "bundleId": "com.bravado.tylr",
     "appCategoryType": "public.app-category.developer-tools",
-    "copyright": "Copyright © Aluxian"
+    "copyright": "tyler"
   },
   "linux": {
     "genericName": "Demo Application",
@@ -56,7 +56,7 @@
     "section": "web"
   },
   "win": {
-    "companyName": "Aluxian",
-    "copyright": "Copyright © Aluxian"
+    "companyName": "none",
+    "copyright": "tyler"
   }
 }

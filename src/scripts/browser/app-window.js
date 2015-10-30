@@ -16,7 +16,7 @@ class AppWindow extends EventEmitter {
     const defaults = {
       width: 640,
       height: 960,
-      resizable: false,
+      resizable: true,
       show: true,
       //   frame: false,
       'web-preferences': {

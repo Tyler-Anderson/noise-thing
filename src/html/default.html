@@ -10,25 +10,46 @@
 
 </head>
 <body>
+
+<span id="title">
     <h1>Noise Thing</h1>
-    <div><p>kayyyy</p></div>
-
-
-
-
-
-    <input type="text" value="75" class="knob" id="volume"
+    <h4>Volume</h4>
+</span>
+<div id="root-container">
+ <div class="single-item" id="dial-root">
+ <!--   <input type="text" value="0" class="dial" id="volume1"
+           data-width:"250"
+           width="300px"
+           height="300px"
            data-displayInput=true
-           skin="tron"
-           data-skin="tron"
-           data-width="250">
+           data-skin="tron">
+     -->
+     <canvas nx="dial" id="volume-dial" style="
+                              width:170px;
+                              height:170px;
+                              "></canvas>
+ </div>
+</div>
+ <div class="container">
+     <div id="bar-root">
+    <div class="control-col" id="bar1">
+    <canvas nx="slider" height="400" width="50" id="s1" class="slider"></canvas>
+    </div>
+    <div class="control-col" id="bar2">
+    <canvas nx="slider" height="400" width="50" id="s2" class="slider"></canvas>
+    </div>
+    <div class="control-col" id="bar3">
+    <canvas nx="slider" height="400" width="50" id="s3" class="slider"></canvas>
+    </div>
+     </div>
+ </div>
 
-
-    <input class="knob" data-width="150" data-displayprevious="true" data-fgcolor="#ffec03" data-skin="tron" data-thickness=".2" value="75" style="width: 79px; height: 50px; position: absolute; vertical-align: middle; margin-top: 50px; margin-left: -114px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 30px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 236, 3); padding: 0px; -webkit-appearance: none; background: none;">
-
+  <script type="text/javascript" src="http://localhost:8000/nexusUI.min.js"></script>
+    <script>
+        window.nx = nx;
+    </script>
   <script type="text/javascript" src="../scripts/renderer/default.js"></script>
   <script type="text/javascript"  src="../scripts/renderer/jquery.knob.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/jquery.kontrol.js"></script>
   <script type="text/javascript" src="../scripts/renderer/noise.js"></script>
   <script type="text/javascript" src="../scripts/renderer/dialPatch.js"></script>
 

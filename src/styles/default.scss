@@ -29,6 +29,11 @@ h2 {
   font-weight: 400;
 }
 
+h4 {
+    color: $brown;
+    text-align: center;
+}
+
 a {
   color: #2b6cc2;
   text-decoration: none;
@@ -36,4 +41,42 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+#dial-root {
+    display: block;
+    margin-bottom:40px;
+
+}
+
+.container {
+    display: block;
+    position:relative;
+}
+
+.control-col {
+    display: inline;
+    margin: 30px;
+}
+
+#root-container {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.single-item {
+    text-align: center;
+}
+
+#bar-root {
+    position:absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+    
+}
+
+#title {
+    margin-bottom:20px;
 }

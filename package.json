@@ -27,6 +27,8 @@
     "gulp-sass":"^2.0.4",
     "rcedit": "^0.3.0",
     "menubar": "^2.3.0",
+    "nexusui": "^1.0.8",
+    "numeral": "^1.5.3",
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
