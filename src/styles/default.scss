@@ -12,13 +12,13 @@ $yellow: #eccd75;
 body {
  // font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-family: 'Josefin Sans', sans-serif;
+  padding: 30px;
   background-color: $pale-yellow;
 }
 
 
 h1{
-    margin-top: 30px;
-    font-size: 65px;
+    font-size: 70px;
     text-align: center;
     color: $darkpurple;
 }
@@ -31,6 +31,13 @@ h2 {
 
 h4 {
     color: $brown;
+    text-align: center;
+    margin-bottom: 7px;
+
+}
+
+#percent {
+    margin-bottom:10px;
     text-align: center;
 }
 
@@ -45,13 +52,14 @@ a {
 
 #dial-root {
     display: block;
-    margin-bottom:40px;
+    margin-bottom:50px;
 
 }
 
 .container {
     display: block;
     position:relative;
+    clear:both;
 }
 
 .control-col {
@@ -63,9 +71,14 @@ a {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
+      margin-bottom:50px;
 }
 
 .single-item {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -78,5 +91,8 @@ a {
 }
 
 #title {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom:20px;
+    text-align:center;
 }

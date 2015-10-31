@@ -1,6 +1,5 @@
-        $(function() {
 
-            $('.dial').dial({
+            $('.dial').knob({
                 'min': 0,
                 'max': 100,
                 'flatMouse': true,
@@ -57,6 +56,11 @@
                         return false;
                     }
                     else return false;
+                },
+                'change' : function(v){
+                    controlEvent({
+                        id: 'masterVolume',
+                        val: v
+                    });
                 }
             });
-        });

@@ -6,6 +6,8 @@
 -->
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../styles/default.css">
+  <link rel="stylesheet" type="text/css" href="../styles/switchery.min.css">
+
 
 
 </head>
@@ -14,41 +16,49 @@
 <span id="title">
     <h1>Noise Thing</h1>
     <h4>Volume</h4>
+    <div><span id="percent">0 %</span></div>
+    <br />
 </span>
+
 <div id="root-container">
- <div class="single-item" id="dial-root">
- <!--   <input type="text" value="0" class="dial" id="volume1"
-           data-width:"250"
-           width="300px"
-           height="300px"
+
+ <!--<div class="single-item" id="dial-root" >
+    <input type="text" value="0" class="dial" id="volume1"
+           data-fgColor="#68a3b1"
            data-displayInput=true
            data-skin="tron">
-     -->
-     <canvas nx="dial" id="volume-dial" style="
+
+      -->
+  <canvas nx="dial" id="masterVolume" style="
                               width:170px;
                               height:170px;
                               "></canvas>
  </div>
 </div>
+
  <div class="container">
      <div id="bar-root">
     <div class="control-col" id="bar1">
-    <canvas nx="slider" height="400" width="50" id="s1" class="slider"></canvas>
+    <canvas nx="slider" height="400" width="50" id="whiteVolume" class="slider"></canvas>
     </div>
     <div class="control-col" id="bar2">
-    <canvas nx="slider" height="400" width="50" id="s2" class="slider"></canvas>
+    <canvas nx="slider" height="400" width="50" id="pinkVolume" class="slider"></canvas>
     </div>
     <div class="control-col" id="bar3">
-    <canvas nx="slider" height="400" width="50" id="s3" class="slider"></canvas>
+    <canvas nx="slider" height="400" width="50" id="brownVolume" class="slider"></canvas>
     </div>
      </div>
  </div>
 
   <script type="text/javascript" src="http://localhost:8000/nexusUI.min.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/default.js"></script>
+  <script type="text/javascript" src="../scripts/renderer/load.js"></script>
   <script type="text/javascript"  src="../scripts/renderer/jquery.knob.js"></script>
   <script type="text/javascript" src="../scripts/renderer/noise.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/dialPatch.js"></script>
+  <script type="text/javascript" src="../scripts/renderer/default.js"></script>
+ <script type="text/javascript" src="../scripts/renderer/switchery.min.js"></script>
 
+
+
+  <!--  <script type="text/javascript" src="../scripts/renderer/dialPatch.js"></script> -->
 </body>
 </html>
