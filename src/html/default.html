@@ -4,7 +4,8 @@
   <title>Noise Thing</title>
 <!---   <link rel="stylesheet"  type="text/css"  href="../styles/fonts/stylesheet.css">
 -->
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../styles/default.css">
   <link rel="stylesheet" type="text/css" href="../styles/switchery.min.css">
 
@@ -29,23 +30,31 @@
            data-skin="tron">
 
       -->
-  <canvas nx="dial" id="masterVolume" style="
+<span>  <canvas nx="dial" id="masterVolume" style="
                               width:170px;
                               height:170px;
                               "></canvas>
- </div>
+</span>
+<br />
+<br />
+<div class="single-Item" id="switch"><input type="checkbox" class="js-switch" /> </div>
+
+
 </div>
+
+</div>
+
 
  <div class="container">
      <div id="bar-root">
     <div class="control-col" id="bar1">
-    <canvas nx="slider" height="400" width="50" id="whiteVolume" class="slider"></canvas>
+    <canvas nx="slider" height="300" width="45" id="whiteVolume" class="slider"></canvas>
     </div>
     <div class="control-col" id="bar2">
-    <canvas nx="slider" height="400" width="50" id="pinkVolume" class="slider"></canvas>
+    <canvas nx="slider" height="300" width="45" id="pinkVolume" class="slider"></canvas>
     </div>
     <div class="control-col" id="bar3">
-    <canvas nx="slider" height="400" width="50" id="brownVolume" class="slider"></canvas>
+    <canvas nx="slider" height="300" width="45" id="brownVolume" class="slider"></canvas>
     </div>
      </div>
  </div>
@@ -54,8 +63,8 @@
   <script type="text/javascript" src="../scripts/renderer/load.js"></script>
   <script type="text/javascript"  src="../scripts/renderer/jquery.knob.js"></script>
   <script type="text/javascript" src="../scripts/renderer/noise.js"></script>
+  <script type="text/javascript" src="../scripts/renderer/switchery.min.js"></script>
   <script type="text/javascript" src="../scripts/renderer/default.js"></script>
- <script type="text/javascript" src="../scripts/renderer/switchery.min.js"></script>
 
 
 

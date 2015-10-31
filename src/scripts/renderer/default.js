@@ -14,8 +14,10 @@ nx.onload = function(){
     nx.widgets.brownVolume.draw();
     nx.widgets.pinkVolume.colors.accent = '#db3f3e';
     nx.widgets.pinkVolume.draw();
-};
+    var elem = document.querySelector('.js-switch');
+    var init = new Switchery(elem);
 
+};
 
 
 const context = new AudioContext(),

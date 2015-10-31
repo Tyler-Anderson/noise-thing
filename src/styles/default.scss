@@ -12,15 +12,15 @@ $yellow: #eccd75;
 body {
  // font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-family: 'Josefin Sans', sans-serif;
-  padding: 30px;
   background-color: $pale-yellow;
 }
 
 
 h1{
-    font-size: 70px;
+    font-size: 55px;
     text-align: center;
     color: $darkpurple;
+    margin-top: 25px;
 }
 
 h2 {
@@ -76,10 +76,10 @@ a {
 }
 
 .single-item {
-    display:block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    clear:both;
 }
 
 #bar-root {
@@ -95,4 +95,7 @@ a {
     margin-right: auto;
     margin-bottom:20px;
     text-align:center;
+}
+
+#switch {
 }
