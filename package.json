@@ -42,7 +42,7 @@
     "postinstall": "(cd src && npm install)"
   },
   "license": "MIT",
-  "author": "Alexandru Rosianu <me@aluxian.com>",
+  "author": "Tyler Anderson <tyler@brava.do",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tyler-Anderson/noise-thing"
