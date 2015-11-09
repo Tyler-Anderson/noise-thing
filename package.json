@@ -45,9 +45,9 @@
   "author": "Alexandru Rosianu <me@aluxian.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aluxian/electron-superkit.git"
+    "url": "https://github.com/Tyler-Anderson/noise-thing"
   },
   "bugs": {
-    "url": "https://github.com/Aluxian/electron-superkit/issues"
+    "url": "https://github.com/Tyler-Anderson/noise-thing/issues"
   }
 }
