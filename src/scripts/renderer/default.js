@@ -19,29 +19,35 @@ nx.onload = function(){
 
 };
 
+
+
 const context = new AudioContext(),
       gainNodes = {
-//          master: context.createGain(),
+          master: context.createGain(),
           pink: context.createGain(),
           brown: context.createGain(),
           white: context.createGain()
       },
       eventControls = {
         masterVolume: function(newValue){
+            gainNodes.master.gain.value = newValue;
             $('#percent').html(
                 numeral(newValue).format('0 %')
             );
         },
         pinkVolume: function(newValue){
-            gainNodes.pink.gain.value = newValue * masterVolume.val.value ;
+            gainNodes.pink.gain.value = newValue ;
         },
         brownVolume: function(newValue){
-            gainNodes.brown.gain.value = newValue * masterVolume.val.value;
+            gainNodes.brown.gain.value = newValue;
         },
         whiteVolume: function(newValue){
-            gainNodes.white.gain.value = newValue * masterVolume.val.value;
+            gainNodes.white.gain.value = newValue;
         }
     };
+
+//should actually get the value from the canvas #fixme
+gainNodes.master.gain.value = 0;
 
 const colorNoises = {
     whiteNoise: context.createWhiteNoise(),
@@ -62,10 +68,18 @@ function toggleSound(playing){
     }
 }
 
+gainNodes.white.connect(gainNodes.master);
+gainNodes.pink.connect(gainNodes.master);
+gainNodes.brown.connect(gainNodes.master);
+gainNodes.master.connect(context.destination);
+
 $('#power').change(function(){
     toggleSound(!this.checked);
 });
 
+
+
+/*
 function* nodeItems(obj) {
     for (let key of Object.keys(obj)) {
         yield [key, obj[key]];
@@ -75,6 +89,7 @@ function* nodeItems(obj) {
 for (let item of nodeItems(gainNodes)) {
     item[1].connect(context.destination);
 }
+*/
 
 function controlEvent(data) {
     eventControls[data.id](data.val);
