@@ -14,8 +14,10 @@ nx.onload = function(){
     nx.widgets.brownVolume.draw();
     nx.widgets.pinkVolume.colors.accent = '#db3f3e';
     nx.widgets.pinkVolume.draw();
-    var elem = document.querySelector('.js-switch');
-    var init = new Switchery(elem);
+    const elem = document.querySelector('.js-switch');
+    const init = new Switchery(elem);
+    gainNodes.master.gain.value = window.masterVolume.val.value;
+
 
 };
 
@@ -47,7 +49,6 @@ const context = new AudioContext(),
     };
 
 //should actually get the value from the canvas #fixme
-gainNodes.master.gain.value = 0;
 
 const colorNoises = {
     whiteNoise: context.createWhiteNoise(),
