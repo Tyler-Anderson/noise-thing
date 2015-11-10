@@ -28,20 +28,20 @@
     "submitUrl": "http://localhost:1127/post"
   },
   "updater": {
-    "manifestUrl": "https://raw.githubusercontent.com/Aluxian/electron-superkit/deploy/src/package.json",
+    "manifestUrl": "https://raw.githubusercontent.com/Tyler-Anderson/noise-thing/deploy/src/package.json",
     "download": {
-      "darwin": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ productName }}.dmg",
+      "darwin": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ productName }}.dmg",
       "linux": {
         "deb": {
-          "ia32": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ name }}-{{ version }}-i386.deb",
-          "x64": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ name }}-{{ version }}-amd64.deb"
+          "ia32": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ name }}-{{ version }}-i386.deb",
+          "x64": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ name }}-{{ version }}-amd64.deb"
         },
         "rpm": {
-          "ia32": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ name }}-{{ version }}-i386.rpm",
-          "x64": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ name }}-{{ version }}-x86_64.rpm"
+          "ia32": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ name }}-{{ version }}-i386.rpm",
+          "x64": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ name }}-{{ version }}-x86_64.rpm"
         }
       },
-      "win": "https://github.com/Aluxian/electron-superkit/releases/download/v{{ version }}/{{ productName }}Setup.exe"
+      "win": "https://github.com/Tyler-Anderson/noise-thing/releases/download/v{{ version }}/{{ productName }}Setup.exe"
     }
   },
   "darwin": {

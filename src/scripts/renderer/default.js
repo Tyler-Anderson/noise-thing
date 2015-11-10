@@ -19,33 +19,52 @@ nx.onload = function(){
 
 };
 
-
 const context = new AudioContext(),
       gainNodes = {
-          master: context.createGain(),
+//          master: context.createGain(),
           pink: context.createGain(),
           brown: context.createGain(),
           white: context.createGain()
-      };
+      },
+      eventControls = {
+        masterVolume: function(newValue){
+            $('#percent').html(
+                numeral(newValue).format('0 %')
+            );
+        },
+        pinkVolume: function(newValue){
+            gainNodes.pink.gain.value = newValue * masterVolume.val.value ;
+        },
+        brownVolume: function(newValue){
+            gainNodes.brown.gain.value = newValue * masterVolume.val.value;
+        },
+        whiteVolume: function(newValue){
+            gainNodes.white.gain.value = newValue * masterVolume.val.value;
+        }
+    };
 
-const eventControls = {
-    masterVolume: function(newValue){
-        gainNodes.master.gain.value = newValue;
-        $('#percent').html(
-            numeral(newValue).format('0 %')
-        );
-    },
-    pinkVolume: function(newValue){
-        gainNodes.pink.gain.value = newValue;
-    },
-    brownVolume: function(newValue){
-        gainNodes.brown.gain.value = newValue;
-    },
-    whiteVolume: function(newValue){
-        gainNodes.white.gain.value = newValue;
-    }
+const colorNoises = {
+    whiteNoise: context.createWhiteNoise(),
+    pinkNoise:  context.createPinkNoise(),
+    brownNoise: context.createBrownNoise()
 };
 
+function toggleSound(playing){
+    if (playing){
+        colorNoises.whiteNoise.disconnect();
+        colorNoises.pinkNoise.disconnect();
+        colorNoises.brownNoise.disconnect();
+    }
+    else {
+        colorNoises.whiteNoise.connect(gainNodes.white);
+        colorNoises.pinkNoise.connect(gainNodes.pink);
+        colorNoises.brownNoise.connect(gainNodes.brown);
+    }
+}
+
+$('#power').change(function(){
+    toggleSound(!this.checked);
+});
 
 function* nodeItems(obj) {
     for (let key of Object.keys(obj)) {
@@ -67,6 +86,6 @@ function controlEvent(data) {
 nx.transmit = function(data){
     controlEvent({
       id :this.canvasID,
-      val: parseFloat( numeral(this.val.value).format('0.00'))
+      val: parseFloat( numeral( this.val.value ).format('0.00') )
     });
 };
