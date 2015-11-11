@@ -8,13 +8,23 @@ const numeral = require('numeral');
 require('nexusui');
 
 nx.onload = function(){
+    //set colors and gritty manual setup
     nx.colorize('#68a3b1');
+    nx.widgets.whiteVolume.val.value = 0.50;
+    nx.widgets.whiteVolume.draw();
     nx.widgets.brownVolume.colors.accent = '#494132';
+    nx.widgets.brownVolume.val.value = 0.50;
     nx.widgets.brownVolume.draw();
     nx.widgets.pinkVolume.colors.accent = '#db3f3e';
+    nx.widgets.pinkVolume.val.value = 0.50;
     nx.widgets.pinkVolume.draw();
     const elem = document.querySelector('.js-switch');
     const init = new Switchery(elem);
+    nx.widgets.masterVolume.val.value = 0.50;
+    nx.widgets.masterVolume.draw();
+    $('#percent').html(
+        numeral(nx.widgets.masterVolume.val.value).format('0 %')
+    );
     gainNodes.master.gain.value = window.masterVolume.val.value;
 
 
