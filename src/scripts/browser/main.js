@@ -7,14 +7,14 @@ import Updater from './updater';
 import SquirrelEvents from './squirrel-events';
 import Application from './application';
 import manifest from '../../package.json';
-
+/*
 import menubar from 'menubar';
 var mb = menubar({showDockIcon: true});
 mb.on('ready', function ready () {
     console.log('app is ready');
   // your app code here
 });
-
+*/
 // Log uncaught exceptions
 process.on('uncaughtException', error => console.error(error.stack));
 

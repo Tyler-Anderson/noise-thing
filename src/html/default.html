@@ -2,8 +2,6 @@
 <html>
 <head>
   <title>Noise Thing</title>
-<!---   <link rel="stylesheet"  type="text/css"  href="../styles/fonts/stylesheet.css">
--->
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext'
         rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../styles/default.css">
@@ -21,20 +19,14 @@
 </span>
 
 <div id="root-container">
-
-<span>
     <canvas nx="dial" id="masterVolume" style="
                             width:170px;
-                            height:170px;"></canvas>
-</span>
-
-<div class="single-Item" id="switch" style="margin-top:20px;">
-    <input type="checkbox" id="power" class="js-switch" />
+                            height:170px;">
+    </canvas>
+    <div class="single-Item" id="switch" style="margin-top:20px;">
+        <input type="checkbox" id="power" class="js-switch" />
+    </div>
 </div>
-</div>
-
-</div>
-
 
  <div class="container">
      <div id="bar-root">
@@ -50,13 +42,8 @@
      </div>
  </div>
 
-  <script type="text/javascript" src="http://localhost:8000/nexusUI.min.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/load.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/jquery.knob.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/noise.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/switchery.min.js"></script>
-  <script type="text/javascript" src="../scripts/renderer/default.js"></script>
-
-
+<script type="text/javascript" src="../scripts/renderer/noise.js"></script>
+<script type="text/javascript" src="../scripts/renderer/switchery.min.js"></script>
+<script type="text/javascript" src="../scripts/renderer/default.js"></script>
 </body>
 </html>

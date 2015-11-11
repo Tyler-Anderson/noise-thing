@@ -5,8 +5,7 @@ Tyler Anderson 2015
 const jQuery = require('jQuery');
 const $ = jQuery;
 const numeral = require('numeral');
-
-console.log('renderer/default.js is go');
+require('nexusui');
 
 nx.onload = function(){
     nx.colorize('#68a3b1');
@@ -20,8 +19,6 @@ nx.onload = function(){
 
 
 };
-
-
 
 const context = new AudioContext(),
       gainNodes = {
@@ -48,12 +45,10 @@ const context = new AudioContext(),
         }
     };
 
-//should actually get the value from the canvas #fixme
-
 const colorNoises = {
-    whiteNoise: context.createWhiteNoise(),
-    pinkNoise:  context.createPinkNoise(),
-    brownNoise: context.createBrownNoise()
+      whiteNoise: context.createWhiteNoise(),
+      pinkNoise:  context.createPinkNoise(),
+      brownNoise: context.createBrownNoise()
 };
 
 function toggleSound(playing){
@@ -78,15 +73,14 @@ $('#power').change(function(){
     toggleSound(!this.checked);
 });
 
-
-
-/*
+//util function to iterate over objects
 function* nodeItems(obj) {
     for (let key of Object.keys(obj)) {
         yield [key, obj[key]];
     }
 }
 
+/*
 for (let item of nodeItems(gainNodes)) {
     item[1].connect(context.destination);
 }

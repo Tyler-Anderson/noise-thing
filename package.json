@@ -29,6 +29,7 @@
     "menubar": "^2.3.0",
     "nexusui": "^1.0.8",
     "numeral": "^1.5.3",
+    "extend": "^3.0.0",
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
