@@ -5,12 +5,21 @@
     "node": true,
     "es6": true
   },
+  "settings": {
+        "ecmascript": 6,
+        "jsx": true
+},
   "ecmaFeatures": {
     "modules": true
   },
   "rules": {
-    "quotes": [2, "single"],
+    "no-unused-vars": 0,
+    "camelcase": 0,
+    "no-underscore-dangle": 0
     "no-process-exit": 0,
     "no-fallthrough": 0
   }
 }
+
+
+
