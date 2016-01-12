@@ -6,5 +6,6 @@ this is the electron version which the other repos (noise-web, noise-mobile) are
 https://play.google.com/store/apps/details?id=io.cordova.noise_thing&hl=en
 submitting to the apple app store soon as well. 
 
-was also the basis for https://www.npmjs.com/package/colornoise although that portion of the code is actually cobbled
+I also created this noise generating library based on this project, it's available on npm here
+https://www.npmjs.com/package/colornoise although that portion of the code is actually cobbled
 together from examples scattered online. 
